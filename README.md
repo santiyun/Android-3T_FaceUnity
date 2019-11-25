@@ -1,13 +1,40 @@
-## 简介
-此Demo为展示三体云基于SaaS SDK服务的连麦直播产品 -  3T lova （Live-streaming Over App）的功能而开发。
-具体功能为，主播创建直播间后，参与连麦的副播进入到与主播相同的直播频道（房间ID）中, 主播和副播通过三体连麦直播（3T Lova）进行实时音视频交互;同时主播与副播的的音视频数据在视频云进行混流后推送到CDN供观众端观看，实现连麦直播。
+## 3T 与 相芯美颜 SDK 集成 Demo 演示
 
-## 运行环境
-* Android Studio 3.0 +
-* 真实 Android 设备 (Nexus 5X 或者其它设备)
-* 部分模拟器会存在功能缺失或者性能问题，所以推荐使用真机
+**注意：<br/>
+1.此 Demo 仅展示 相芯美颜 SDK 基本的美颜效果，验证 SDK 提供的裸数据没有问题。其他高级美颜或道具效果， 请参考 FURenderer 类中的接口介绍或 相芯美颜 相关文档介绍。**
 
-## 接口变动
-### 2018.08.01
-* 添加回调 public void onSpeakingMuted(long uid, boolean muted)
-</br>说明：此接口为被禁言回调，原本无论被禁言还是自己主动禁言都回调onUserMuteAudio。
+--
+### 使用说明
+
+#### 准备工作
+1. 在三体云官网SDK下载页 [http://3ttech.cn/index.php?menu=53](http://3ttech.cn/index.php?menu=53) 下载对应平台的 连麦直播SDK。
+2. 登录三体云官网 [http://dashboard.3ttech.cn/index/login](http://dashboard.3ttech.cn/index/login) 注册体验账号，进入控制台新建自己的应用并获取APPID。
+3. 请联系 Faceunity 获取测试证书并替换本 authpack 类。
+
+#### 使用说明
+1. 引用 SDK 的 aar包，在app项目下的build.gradle文件中添加红框中相应代码来引用。
+![](Android_5.jpg) 
+![](Android_6.jpg) 
+![](Android_7.jpg) 
+
+2. 将申请到的 **APPID** 填入 SDK 的初始化函数 create 中，如下图所示。
+![](Android_8.jpg)
+3. 最后编码代码即可运行Demo。
+
+#### 运行环境和要求
+
+> Android Studio 3.5 +  
+> minSdkVersion 16  
+> gradle 5.4.1  
+> java 8.0  
+
+
+>Android权限要求:  
+**android.permission.CAMERA** ---> SDK视频模块需要使用此权限用来访问相机，用于获取本地视频数据。  
+**android.permission.RECORD_AUDIO** ---> SDK音频模块需要使用此权限用来访问麦克风，用于获取本地音频数据。  
+**android.permission.INTERNET** ---> SDK的直播和通讯功能，均需要使用网络进行上传。  
+**android.permission.BLUETOOTH** ---> SDK的直播和通讯功能，均需要访问蓝牙权限，保证用户能正常使用蓝牙耳机。  
+**android.permission.BLUETOOTH_ADMIN** ---> 蓝牙权限。  
+**android.permission.MODIFY\_AUDIO\_SETTINGS** ---> SDK的直播和通讯功能，均需要访问音频路由，保证能正常切换听筒，扬声器，耳机等路由切换。  
+**android.permission.ACCESS\_NETWORK\_STATE** ---> SDK的直播和通讯功能，均需要访问网络状态。  
+**android.permission.READ\_PHONE\_STATE** ---> SDK的直播和通讯功能，均需要访问手机通话状态。  
