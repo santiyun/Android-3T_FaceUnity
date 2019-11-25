@@ -2,3 +2,5 @@
 /.idea/*
 /local.properties
 /app/libs/*
+/build/*
+*.iml
