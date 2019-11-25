@@ -9,17 +9,20 @@
 #### 准备工作
 1. 在三体云官网SDK下载页 [http://3ttech.cn/index.php?menu=53](http://3ttech.cn/index.php?menu=53) 下载对应平台的 连麦直播SDK。
 2. 登录三体云官网 [http://dashboard.3ttech.cn/index/login](http://dashboard.3ttech.cn/index/login) 注册体验账号，进入控制台新建自己的应用并获取APPID。
-3. 请联系 Faceunity 获取测试证书并替换本 authpack 类。
 
 #### 使用说明
-1. 引用 SDK 的 aar包，在app项目下的build.gradle文件中添加红框中相应代码来引用。
+1. 引用 SDK 的 aar包，在app项目下的 **build.gradle** 文件中添加红框中相应代码来引用。
 ![](Android_5.jpg) 
 ![](Android_6.jpg) 
 ![](Android_7.jpg) 
 
-2. 将申请到的 **APPID** 填入 SDK 的初始化函数 create 中，如下图所示。
+2. 将申请到的 **APPID** 填入 SDK 的初始化函数 **create** 中，如下图所示。
 ![](Android_8.jpg)
-3. 最后编码代码即可运行Demo。
+
+3. 请联系 **Faceunity** 获取测试证书并替换本 **authpack** 类。
+![](Android_9.jpg)
+ 
+4. 最后编码代码即可运行Demo。
 
 #### 运行环境和要求
 
