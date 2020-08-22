@@ -15,19 +15,6 @@ android {
         }
     }
 
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
@@ -38,12 +25,17 @@ android {
             jniLibs.srcDirs = ['libs']
             assets.srcDirs = ['assets']
         }
-        release.setRoot('build-types/release')
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
     }
 }
 

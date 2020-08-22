@@ -1,7 +1,7 @@
 <resources>
-	<string name="app_name">连麦直播</string>
+	<string name="app_name">连麦直播-FaceUnity</string>
 	<string name="version_info">http://www.3ttech.cn version %1$s</string>
-	<string name="copyright_info">Copyright © 2019 北京三体云联科技有限公司 版权所有</string>
+	<string name="copyright_info">Copyright © 2020 北京三体云联科技有限公司 版权所有</string>
 	<string name="ttt_test">测试</string>
 	<string name="ttt_copy">复制</string>
 	<string name="ttt_adv_setting">高级设置</string>
