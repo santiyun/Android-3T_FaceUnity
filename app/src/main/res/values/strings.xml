@@ -23,13 +23,14 @@
 	<string name="ttt_enter_channel">进入房间</string>
 	<string name="ttt_hint_loading_channel">正在进入房间&#8230;</string>
 	<string name="ttt_hint_linking_channel">正在连麦中&#8230;</string>
+	<string name="ttt_hint_progress_channel">正在处理中&#8230;</string>
 	<string name="ttt_error_network_disconnected">网络连接断开，请检查网络</string>
 	<string name="ttt_error_enterchannel_check_channel_empty">房间号不能为空</string>
 	<string name="ttt_error_enterchannel_check_userid_empty">用户ID不能为空</string>
 	<string name="ttt_error_enterchannel_check_owner">房间号不能为本房间</string>
 	<string name="ttt_error_enterchannel_check_format">房间号只能为数字</string>
 	<string name="ttt_error_enterchannel_check_member_max">房间人数已达上限</string>
-	<string name="hint_channel_name_limit">请输入19位以内的房间ID</string>
+	<string name="hint_channel_name_limit">请输入小于19位以内的房间ID</string>
 	<string name="hint_user_name_limit">请输入19位以内的用户ID</string>
 	<string name="main_item_volume">音量:%1$s</string>
 	<string name="ttt_audio_upspeed">A-%1$skbps\u2191</string>

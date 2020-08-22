@@ -78,14 +78,17 @@ public class RemoteWindow extends RelativeLayout {
             });
         }
 
-        SurfaceView mSurfaceView = mTTTEngine.CreateRendererView(mContext);
-        mSurfaceView.setZOrderMediaOverlay(true);
+        SurfaceView surfaceView;
         if (localId == id) {
-            mTTTEngine.setupLocalVideo(new VideoCanvas(0, Constants.RENDER_MODE_HIDDEN, mSurfaceView), oritation);
+            surfaceView = TTTRtcEngine.CreateRendererSurfaceView(mContext);
+            surfaceView.setZOrderMediaOverlay(false);
+            mTTTEngine.setupLocalVideo(new VideoCanvas(0, Constants.RENDER_MODE_HIDDEN, surfaceView), oritation);
         } else {
-            mTTTEngine.setupRemoteVideo(new VideoCanvas(mId, Constants.RENDER_MODE_HIDDEN, mSurfaceView));
+            surfaceView = TTTRtcEngine.CreateRendererView(mContext);
+            surfaceView.setZOrderMediaOverlay(true);
+            mTTTEngine.setupRemoteVideo(new VideoCanvas(mId, Constants.RENDER_MODE_HIDDEN, surfaceView));
         }
-        mVideoLayout.addView(mSurfaceView);
+        mVideoLayout.addView(surfaceView);
         mSpeakImage.setImageResource(mIsMuted ? R.drawable.jinyan : R.drawable.mainly_btn_speaker_selector);
     }
 
