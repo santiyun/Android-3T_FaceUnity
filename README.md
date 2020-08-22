@@ -24,11 +24,11 @@
  
 4. 最后编码代码即可运行Demo。
 
-#### 运行环境和要求
+#### Demo 运行环境
 
-> Android Studio 3.5 +  
-> minSdkVersion 16  
-> gradle 5.4.1  
+> Android Studio 4.0.1 
+> minSdkVersion 18  
+> gradle 6.1.1 
 > java 8.0  
 
 
